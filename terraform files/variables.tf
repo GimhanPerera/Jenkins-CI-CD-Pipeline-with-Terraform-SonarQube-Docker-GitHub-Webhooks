@@ -33,5 +33,5 @@ variable "admin_username" {
 
 variable "ssh_key" {
   description = "Your public SSH key"
-  default = "D:/Projects/tf_projects/id_ssh.pub"
+  default = "<PATH>/<KEY>.pub"
 }
