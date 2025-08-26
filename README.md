@@ -1,4 +1,6 @@
 # Jenkins-CI-CD-Pipeline-with-Terraform-SonarQube-Docker-GitHub-Webhooks
+<img width="681" height="469" alt="pipeline drawio" src="https://github.com/user-attachments/assets/0c810d6c-fbc0-4d8a-a432-abd689284fe0" />
+
 Jenkins CI/CD pipeline integrating GitHub Webhooks, SonarQube, and Docker. Automates build, test, code analysis, and containerized deployment. Includes auto-tagging for Docker images and optional Terraform integration for infrastructure provisioning.
 
 ☁️ Provisioning Infrastructure with Terraform on Azure
@@ -203,6 +205,16 @@ Applies the plan and provisions the VMs in Azure.
 
 ---
 
+### 6. Automating Docker Image Tagging
+* To secure Jenkins, Role-Based Access Control (RBAC) was configured:
+1. Installed the Role-Based Authorization Strategy plugin.
+2. Navigated to Manage Jenkins → Configure Global Security.
+3. Enabled Role-Based Strategy for authorization.
+4. Created a Developer role with view-only permissions (read access to jobs, builds, and pipelines).
+5. Created a dev user and assigned them the Developer role.
+🔒 This ensures developers can monitor pipeline runs but cannot modify configurations.
+---
+
 ## ✅ Key Outcomes
 
 * Infrastructure provisioning on Azure using Terraform.
@@ -210,4 +222,5 @@ Applies the plan and provisions the VMs in Azure.
 * Code quality validation with SonarQube.
 * Dockerized deployment.
 * Auto-tagged Docker images.
+* Jenkins role-based access control with restricted dev user access.
 * Triggered via GitHub webhooks.
